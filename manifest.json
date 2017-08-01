@@ -1,0 +1,33 @@
+{
+  "manifest_version": 2,
+
+  "name": "Keep Colorado Green Volunteer Banking",
+  "description": "This will show all of your Facebook friends that go to a Colorado university",
+  "version": "0.1",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "icons": {
+    "128": "icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.facebook.com/*",
+        "http://www.facebook.com/*"
+      ],
+      "js": [
+        "jquery-3.2.1.min.js",
+        "scroller.js"
+      ]
+    }
+  ],
+}
