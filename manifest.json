@@ -11,7 +11,9 @@
   },
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs",
+    "background"
   ],
 
   "icons": {
@@ -29,5 +31,5 @@
         "scroller.js"
       ]
     }
-  ],
+  ]
 }
