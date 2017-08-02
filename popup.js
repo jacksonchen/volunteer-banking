@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
 
       var schoolMines = function() {
+        console.log("ASDFSFSAFASDF");
         let promise = new Promise((resolve, reject) => {
           chrome.tabs.update({ url: 'https://www.facebook.com/search/59645937006/students/present/me/friends/intersect' }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
           chrome.runtime.onMessage.addListener(
             function (request, sender, sendResponse) {
               if (request.school === "59645937006") {
+                console.log("Resolved school of mines");
                 resolve();
               }
             }
@@ -502,34 +504,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
       adamsState()
-        .then(cuBoulder)
-        .then(cuDenver)
-        .then(csu)
         .then(schoolMines)
-        .then(pueblo)
-        .then(fortlewis)
-        .then(uccs)
-        .then(pikespeak)
-        .then(mesa)
-        .then(southdenver)
-        .then(unc)
-        .then(western)
-        .then(aims)
-        .then(mountain)
-        .then(arapahoe)
-        .then(northwestern)
-        .then(aurora)
-        .then(ccDenver)
-        .then(frontrange)
-        .then(lamar)
-        .then(morgan)
-        .then(otero)
-        .then(redrocks)
-        .then(trinidad)
+        // .then(cuBoulder)
+        // .then(cuDenver)
+        .then(schoolMines)
+        .then()
+        .then(csu)
+        .then(schoolMines);
+        // .then(pueblo)
+        // .then(fortlewis)
+        // .then(uccs)
+        // .then(pikespeak)
+        // .then(mesa)
+        // .then(southdenver)
+        // .then(unc)
+        // .then(western)
+        // .then(aims)
+        // .then(mountain)
+        // .then(arapahoe)
+        // .then(northwestern)
+        // .then(aurora)
+        // .then(ccDenver)
+        // .then(frontrange)
+        // .then(lamar)
+        // .then(morgan)
+        // .then(otero)
+        // .then(redrocks)
+        // .then(trinidad)
 
       chrome.runtime.onMessage.addListener(
         function (request, sender, sendResponse) {
-          if (request.msg === "found_friends") {
+          if (request.msg === "found_friends" && request.data.length > 0) {
+            var child = "<div><h2>" + request.school + "</h2>";
+            request.data.forEach(function(person) {
+              child += "<div>" + person + "</div>"
+            });
+            child += "</div>";
+            document.querySelector('main').insertAdjacentHTML('beforeend', child);
             console.log(request.data);
           }
         }

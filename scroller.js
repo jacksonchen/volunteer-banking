@@ -5,6 +5,7 @@ var match = re.exec(window.location.href);
 
 $(document).ready(function() {
   if ($('._50f4').length) {
+    console.log("There is nothing!!!");
     chrome.runtime.sendMessage({msg: "found_friends", school: match[1], data: friends});
   }
   else {
