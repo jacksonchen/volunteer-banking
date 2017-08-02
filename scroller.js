@@ -2,22 +2,25 @@ var i = 0;
 var friends = [];
 
 $(document).ready(function() {
-  console.log(school);
   scrollDown();
 });
 
 function scrollDown() {
+  console.log("Scrolling");
   setTimeout(function () {
     window.scrollTo(0,document.body.scrollHeight);
     i++;
-    if ($('#browse_end_of_results_footer').length == 0 && i < 100) {
+    if ($('._4s4i').length == 0 && i < 100) {
       scrollDown();
     }
     else {
       friends = $.map($('._4e2r').find('._32mo'), function(val) {
           return val.innerText;
       });
-      chrome.runtime.sendMessage({msg: "found_friends", school: "CU Boulder", data: friends});
+      var re = /https:\/\/www\.facebook\.com\/search\/(\d+)\//;
+      var match = re.exec(window.location.href);
+      console.log(match[1]);
+      chrome.runtime.sendMessage({msg: "found_friends", school: match[1], data: friends});
     }
   }, 1000);
 }
