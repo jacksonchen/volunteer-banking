@@ -40,14 +40,11 @@ function getCurrentTabUrl(callback) {
   });
 }
 
-function renderElem(text, elem) {
-  document.getElementById(elem).textContent = text;
-}
-
 document.addEventListener('DOMContentLoaded', function() {
   getCurrentTabUrl(function(tab, err) {
     if (err) {
-      renderElem('The following error occurred: ' + err, 'status');
+      $('#loading').remove();
+      $('main').text('Please try this on a tab with Facebook open');
     }
     else {
       var adamsState = function() {
