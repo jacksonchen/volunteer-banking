@@ -1,3 +1,31 @@
+var schoolMap = {
+  "33810812947": "Adams State University",
+  "83086245170": "CU Boulder",
+  "73610239330": "CU Denver",
+  "136298855614": "Colorado State University",
+  "59645937006": "Colorado School of Mines",
+  "96329633808": "CSU - Pueblo",
+  "35870280687": "Fort Lewis College",
+  "243117181362": "CU Colorado Springs",
+  "50227242991": "Pikes Peak Community College",
+  "165068093548114": "Colorado Mesa University",
+  "138023979555164": "CU South Denver",
+  "116847458387226": "University of Northern Colorado",
+  "121880351276656": "Western State Colorado University",
+  "49496176115": "Aims Community College",
+  "7538289310": "Colorado Mountain College",
+  "126101925960": "Arapahoe Community College",
+  "286058458075796": "Northwestern Community College",
+  "464548740124": "Aurora Community College",
+  "109440426760": "Community College of Denver",
+  "242358403703": "Front Range Community College",
+  "197149150316268": "Lamar Community College",
+  "71264169052": "Morgan Community College",
+  "208872800359": "Otero Junior College",
+  "266227128186": "Red Rocks Community College",
+  "204290419427": "Trinidad State Junior College"
+}
+
 function getCurrentTabUrl(callback) {
   var queryInfo = {
     active: true,
@@ -99,10 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var schoolMines = function() {
-        console.log("ASDFSFSAFASDF");
         let promise = new Promise((resolve, reject) => {
           chrome.tabs.update({ url: 'https://www.facebook.com/search/59645937006/students/present/me/friends/intersect' }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
@@ -120,6 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var pueblo = function() {
@@ -139,6 +168,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var fortlewis = function() {
@@ -158,6 +188,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var uccs = function() {
@@ -177,6 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var pikespeak = function() {
@@ -196,6 +228,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var mesa = function() {
@@ -215,6 +248,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var southdenver = function() {
@@ -234,6 +268,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var unc = function() {
@@ -253,6 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var western = function() {
@@ -272,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var aims = function() {
@@ -291,6 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var mountain = function() {
@@ -310,6 +348,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var arapahoe = function() {
@@ -329,6 +368,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var northwestern = function() {
@@ -348,6 +388,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var aurora = function() {
@@ -367,6 +408,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var ccDenver = function() {
@@ -386,6 +428,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var frontrange = function() {
@@ -405,6 +448,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var lamar = function() {
@@ -424,6 +468,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var morgan = function() {
@@ -443,6 +488,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var otero = function() {
@@ -462,6 +508,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var redrocks = function() {
@@ -481,6 +528,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
       var trinidad = function() {
@@ -500,42 +548,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }
           );
         });
+        return promise;
       }
 
 
       adamsState()
         .then(schoolMines)
-        // .then(cuBoulder)
-        // .then(cuDenver)
-        .then(schoolMines)
-        .then()
         .then(csu)
-        .then(schoolMines);
-        // .then(pueblo)
-        // .then(fortlewis)
-        // .then(uccs)
-        // .then(pikespeak)
-        // .then(mesa)
-        // .then(southdenver)
-        // .then(unc)
-        // .then(western)
-        // .then(aims)
-        // .then(mountain)
-        // .then(arapahoe)
-        // .then(northwestern)
-        // .then(aurora)
-        // .then(ccDenver)
-        // .then(frontrange)
-        // .then(lamar)
-        // .then(morgan)
-        // .then(otero)
-        // .then(redrocks)
-        // .then(trinidad)
+        .then(cuBoulder)
+        .then(cuDenver)
+        .then(pueblo)
+        .then(fortlewis)
+        .then(uccs)
+        .then(pikespeak)
+        .then(mesa)
+        .then(southdenver)
+        .then(unc)
+        .then(western)
+        .then(aims)
+        .then(mountain)
+        .then(arapahoe)
+        .then(northwestern)
+        .then(aurora)
+        .then(ccDenver)
+        .then(frontrange)
+        .then(lamar)
+        .then(morgan)
+        .then(otero)
+        .then(redrocks)
+        .then(trinidad)
 
       chrome.runtime.onMessage.addListener(
         function (request, sender, sendResponse) {
           if (request.msg === "found_friends" && request.data.length > 0) {
-            var child = "<div><h2>" + request.school + "</h2>";
+            var child = "<div><h2>" + schoolMap[request.school] + "</h2>";
             request.data.forEach(function(person) {
               child += "<div>" + person + "</div>"
             });
