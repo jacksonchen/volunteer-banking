@@ -142,7 +142,6 @@ document.addEventListener('DOMContentLoaded', function() {
           chrome.runtime.onMessage.addListener(
             function (request, sender, sendResponse) {
               if (request.school === "59645937006") {
-                console.log("Resolved school of mines");
                 resolve();
               }
             }
@@ -543,6 +542,7 @@ document.addEventListener('DOMContentLoaded', function() {
           chrome.runtime.onMessage.addListener(
             function (request, sender, sendResponse) {
               if (request.school === "204290419427") {
+                $('#loading').remove();
                 resolve();
               }
             }
@@ -581,13 +581,14 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.runtime.onMessage.addListener(
         function (request, sender, sendResponse) {
           if (request.msg === "found_friends" && request.data.length > 0) {
-            var child = "<div><h2>" + schoolMap[request.school] + "</h2>";
+            var child = "<div><h2>" + schoolMap[request.school] + "</h2>",
+                elem = document.querySelector('main');
             request.data.forEach(function(person) {
               child += "<div>" + person + "</div>"
             });
             child += "</div>";
-            document.querySelector('main').insertAdjacentHTML('beforeend', child);
-            console.log(request.data);
+            elem.insertAdjacentHTML('beforeend', child);
+            window.scrollTo(0,document.body.scrollHeight);
           }
         }
       );
