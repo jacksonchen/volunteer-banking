@@ -15,7 +15,7 @@ function scrollDown() {
       scrollDown();
     }
     else {
-      friends = $.map($('._4e2r').find('._32mo'), function(val) {
+      friends = $.map($('._42ef').find('._32mo'), function(val) {
           return val.innerText;
       });
       chrome.runtime.sendMessage({msg: "found_friends", school: match[1], data: friends});
