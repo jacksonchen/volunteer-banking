@@ -4,7 +4,7 @@
   "name": "Keep Colorado Green Facebook Banking",
   "short_name": "KCG Facebanking",
   "description": "This will show all of your Facebook friends who go to a university in Colorado",
-  "version": "1.0",
+  "version": "1.1",
   "author": "Keep Colorado Green",
 
   "browser_action": {
