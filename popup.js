@@ -26,6 +26,9 @@ var schoolMap = {
   "204290419427": "Trinidad State Junior College"
 }
 
+const searchString = 'https://www.facebook.com/search/',
+      suffixString = '/students/present/me/friends/intersect?kcg=true';
+
 function getCurrentTabUrl(callback) {
   var queryInfo = {
     active: true,
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
     else {
       var adamsState = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/33810812947/students/present/me/friends/intersect' }, function() { // CU Boulder
+          chrome.tabs.update({ url: searchString.concat('33810812947').concat(suffixString) }, function() { // CU Boulder
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -69,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var cuBoulder = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/83086245170/students/present/me/friends/intersect' }, function() { // CU Boulder
+          chrome.tabs.update({ url: searchString.concat('83086245170').concat(suffixString) }, function() { // CU Boulder
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -89,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var cuDenver = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/73610239330/students/present/me/friends/intersect' }, function() { // CU Denver
+          chrome.tabs.update({ url: searchString.concat('73610239330').concat(suffixString) }, function() { // CU Denver
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -109,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var csu = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/136298855614/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('136298855614').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -129,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var schoolMines = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/59645937006/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('59645937006').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -149,7 +152,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var pueblo = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/96329633808/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('96329633808').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -169,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var fortlewis = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/35870280687/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('35870280687').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -189,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var uccs = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/243117181362/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('243117181362').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -209,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var pikespeak = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/50227242991/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('50227242991').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -229,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var mesa = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/165068093548114/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('165068093548114').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -249,7 +252,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var southdenver = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/138023979555164/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('138023979555164').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -269,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var unc = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/116847458387226/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('116847458387226').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -289,7 +292,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var western = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/121880351276656/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('121880351276656').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -309,7 +312,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var aims = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/49496176115/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('49496176115').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -329,7 +332,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var mountain = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/7538289310/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('7538289310').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -349,7 +352,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var arapahoe = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/126101925960/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('126101925960').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -369,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var northwestern = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/286058458075796/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('286058458075796').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -389,7 +392,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var aurora = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/464548740124/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('464548740124').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -409,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var ccDenver = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/109440426760/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('109440426760').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -429,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var frontrange = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/242358403703/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('242358403703').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -449,7 +452,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var lamar = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/197149150316268/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('197149150316268').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -469,7 +472,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var morgan = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/71264169052/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('71264169052').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -489,7 +492,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var otero = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/208872800359/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('208872800359').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -509,7 +512,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var redrocks = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/266227128186/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('266227128186').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });
@@ -529,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       var trinidad = function() {
         let promise = new Promise((resolve, reject) => {
-          chrome.tabs.update({ url: 'https://www.facebook.com/search/204290419427/students/present/me/friends/intersect' }, function() { // CSU
+          chrome.tabs.update({ url: searchString.concat('204290419427').concat(suffixString) }, function() { // CSU
             chrome.tabs.executeScript(tab.id, { file: 'jquery-3.2.1.min.js' }, function() {
               chrome.tabs.executeScript(tab.id, { file: 'scroller.js' }, function() {
               });

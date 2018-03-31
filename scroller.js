@@ -1,13 +1,16 @@
 var i = 0;
 var friends = [];
-var re = /https:\/\/www\.facebook\.com\/search\/(\d+)\//;
+var re = /https:\/\/www\.facebook\.com\/search\/(\d+)\/students\/present\/me\/friends\/intersect\?kcg=true/;
 var match = re.exec(window.location.href);
 
 $(document).ready(function() {
-  scrollDown();
+  if (match !== null) {
+    scrollDown();
+  }
 });
 
 function scrollDown() {
+
   setTimeout(function () {
     window.scrollTo(0,document.body.scrollHeight);
     i++;
